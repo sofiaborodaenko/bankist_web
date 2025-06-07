@@ -45,7 +45,7 @@ document.addEventListener("keydown", function (e) {
   }
 });
 
-// creating a cookie element
+// Creating a cookie element
 const message = document.createElement("div");
 message.classList.add("cookie-message");
 message.innerHTML =
@@ -63,12 +63,12 @@ document
     message.remove();
   });
 
-// learn more button
+// Learn more button
 btnScrollTo.addEventListener("click", function () {
   section1.scrollIntoView({ behavior: "smooth" });
 });
 
-// navigation links (using event delegation)
+// Navigation links (using event delegation)
 // 1. add event listener to common parent element
 // 2. determine waht element originate the event
 document.querySelector(".nav__links").addEventListener("click", function (e) {
@@ -83,7 +83,7 @@ document.querySelector(".nav__links").addEventListener("click", function (e) {
   } catch (err) {}
 });
 
-// tabbed component
+// Tabbed component
 tabsContainer.addEventListener("click", function (e) {
   // gets the operation__tab button even if user clicks on the span element
   const clicked = e.target.closest(".operations__tab");
@@ -102,7 +102,7 @@ tabsContainer.addEventListener("click", function (e) {
     .classList.add("operations__content--active");
 });
 
-// menu fade animation
+// Menu fade animation
 const handleHover = function (e, op) {
   if (e.target.classList.contains("nav__link")) {
     const navLink = e.target;
@@ -152,7 +152,7 @@ const headerObserver = new IntersectionObserver(stickyNav, {
 });
 headerObserver.observe(header);
 
-// reaveal sections
+// Reaveal sections
 const reavealSection = function (entries, observer) {
   entries.forEach((entry) => {
     if (!entry.isIntersecting) return;
@@ -172,7 +172,7 @@ allSections.forEach(function (section) {
   section.classList.add("section--hidden");
 });
 
-// lazy loading images
+// Lazy loading images
 const imgTargets = document.querySelectorAll("img[data-src]");
 
 const loadImg = function (entries, observer) {
@@ -196,7 +196,7 @@ const imgObserver = new IntersectionObserver(loadImg, {
 
 imgTargets.forEach((img) => imgObserver.observe(img));
 
-// slider
+// Slider
 let currSlide = 0;
 const maxSlide = slides.length;
 
